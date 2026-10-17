@@ -100,7 +100,7 @@
   .about .gallery .g{border-radius:20px;overflow:hidden;background:var(--lav-soft);box-shadow:0 20px 44px -24px rgba(65,54,68,.3)}
   .about .gallery .g1{grid-row:span 2;aspect-ratio:3/5}
   .about .gallery .g1.solo{grid-row:auto;aspect-ratio:1/1;border-radius:24px}
-  .about .gallery:has(.solo){display:block;max-width:320px}
+  .about .gallery:has(.solo){display:block;width:100%;max-width:280px;margin-inline:auto}
   .about .gallery .g2{aspect-ratio:1/1}
   .about .gallery .g3{aspect-ratio:1/1}
   .about .body p{font-size:16.5px;color:var(--ink70);margin-bottom:20px;max-width:520px}
@@ -171,13 +171,13 @@
   .benefit p{font-size:13.5px;color:var(--ink70)}
 
   /* ─────────── 6 · CIERRE ─────────── */
-  .close{position:relative;background:linear-gradient(160deg,var(--lav-deep),#6E5896);border-radius:40px;padding:96px 56px;text-align:center;color:#FBF6EF;overflow:hidden;margin-bottom:80px}
+  .close{position:relative;background:linear-gradient(160deg,var(--lav-deep),#6E5896);border-radius:28px;padding:40px 24px;text-align:center;color:#FBF6EF;overflow:hidden;margin-bottom:80px}
   .close::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 65%);top:-160px;left:50%;transform:translateX(-50%)}
   .close .miniportrait{width:96px;height:96px;border-radius:50%;overflow:hidden;margin:0 auto 30px;border:3px solid rgba(255,255,255,.4);position:relative;z-index:1}
-  .close h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(30px,4.6vw,52px);line-height:1.1;position:relative;z-index:1}
-  .close h2 em{font-style:italic;color:var(--lav-soft)}
+  .close h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(29px,3.4vw,38px);line-height:1.2;max-width:540px;margin:0 auto;position:relative;z-index:1}
+  .close h2 em{font-style:italic;color:#E9DDF5}
   .close p{max-width:440px;margin:22px auto 0;font-size:15.5px;color:rgba(251,246,239,.8);position:relative;z-index:1}
-  .close .btn{display:inline-block;margin-top:36px;background:var(--offwhite);color:var(--lav-deep);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:16px 42px;border-radius:999px;position:relative;z-index:1;transition:transform .3s}
+  .close .btn{display:inline-block;margin-top:24px;background:var(--offwhite);color:var(--lav-deep);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:16px 42px;border-radius:999px;position:relative;z-index:1;transition:transform .3s}
   .close .btn:hover{transform:translateY(-3px)}
   .close .socials{display:flex;gap:26px;justify-content:center;margin-top:32px;font-size:13px;letter-spacing:.1em;position:relative;z-index:1}
   .close .socials a{color:rgba(251,246,239,.85);transition:color .3s}
@@ -240,11 +240,21 @@
     .gallery .g1{aspect-ratio:3/4!important}
     .ggrid{grid-template-columns:repeat(2,1fr);gap:12px}
     .community{padding:52px 24px;border-radius:28px}
-    .close{padding:64px 26px;border-radius:28px}
+    .close{padding:36px 20px;border-radius:28px}
     .tone{justify-content:flex-start}
     .portrait .badge{transform:translateX(-130px);padding:14px 20px}
     .portrait .badge .n{font-size:28px}
   }
+  section.blk.collab-centered{text-align:center;padding-bottom:20px}
+  .collab-centered .kick{justify-content:center}
+  .collab-centered .head{margin-bottom:32px}
+  .collab-formats{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+  .collab-formats span{display:inline-block;padding:10px 16px;border:1px solid var(--grayline);border-radius:999px;background:var(--lav-soft);color:var(--ink);font-size:14px}
+  .collab-contact{margin-top:26px}
+  .collab-contact p{font-size:13px;color:var(--ink70)}
+  .collab-contact .collab-next{display:inline-flex;flex-direction:column;align-items:center;gap:8px;padding:12px;color:var(--lav-deep);font-size:13px;transition:opacity .2s}
+  .collab-contact .collab-arrow{font-size:24px;line-height:1}
+  .collab-contact .collab-next:hover{opacity:.75}
 </style>
 </head>
 <body>
@@ -260,7 +270,6 @@
     <div>
       <div class="eyebrow kick rv">Creadora de Contenido · Marca Personal</div>
       <h1 class="serif rv d1">Paula<br><em>Sofía</em></h1>
-      <p class="pos rv d2">Una voz que su comunidad no solo sigue — toma como referente. Influencia real sobre una audiencia fiel.</p>
       <div class="contact rv d3">
         <a class="cta-btn" href="#cierre">Colaborar conmigo</a>
       </div>
@@ -300,19 +309,17 @@
         <div class="g g1 solo"><img id="a-1" src="" alt="Paula Sofía"></div>
       </div>
       <div class="body rv d1">
-        <p class="lead">No me siguen por lo que muestro. Se quedan por lo que pienso.</p>
-        <p>Soy Paula Sofía, creadora de contenido y opinión. Mi comunidad no está formada por personas que solo consumen videos; está formada por personas que valoran mi criterio, buscan mi perspectiva y participan en las conversaciones que genero.</p>
-        <p>Nunca he intentado gustarle a todo el mundo, y precisamente esa autenticidad ha hecho que quienes me siguen confíen en mi palabra. Cuando comparto una idea, la debaten. Cuando recomiendo una marca, la escuchan. No porque sea una publicidad, sino porque saben que solo hablo de aquello con lo que realmente me identifico.</p>
-        <p>Cada pieza de contenido pasa por mí. La investigo, la escribo, la grabo y la edito personalmente. Por eso las colaboraciones no se sienten como una interrupción dentro del contenido, sino como una recomendación natural de alguien cuya opinión ya tiene un lugar ganado dentro de su comunidad.</p>
-        <div class="chips">
-          <span>Referente</span><span>Comunidad fiel</span><span>Voz propia</span><span>Contenido propio</span>
-        </div>
+        <p class="lead">Soy Paula Sofía y detrás de esta cuenta hay una persona directa, que comparte lo que piensa.</p>
+        <p>Con el tiempo, este espacio se ha convertido en una comunidad que conecta conmigo por quién soy <em>y no solo por lo que comparto</em>.</p>
+        <p>Cuando recomiendo algo, es porque lo uso, me funciona y siento que puede aportarles.</p>
+        <p>Yo misma pienso, escribo, grabo y edito todo mi contenido.</p>
+        <p>Así, cuando colaboro con una marca, no se siente como un anuncio, sino como una recomendación genuina de alguien en quien ya confían.</p>
         <div class="socials-row">
-          <a href="https://instagram.com/soypaulasofia__" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/soypaulasofia__/" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
-            <span>@soypaulasofia_</span>
+            <span>@soypaulasofia__</span>
           </a>
-          <a href="#" target="_blank" rel="noopener">
+          <a href="https://www.tiktok.com/@soypaulasofia_" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none"><path d="M14.2 3v9.3a3 3 0 1 1-2.3-2.9V6.7A6 6 0 1 0 16.5 12.5V8.9a5.4 5.4 0 0 0 3.3 1.1V7.2a3.2 3.2 0 0 1-2.4-1.1A3.3 3.3 0 0 1 16.5 3h-2.3Z" fill="currentColor"/></svg>
             <span>@soypaulasofia_</span>
           </a>
@@ -360,60 +367,31 @@
 
 <!-- ═══════ 5 · COLABORACIONES ═══════ -->
 <div class="wrap">
-  <section class="blk">
+  <section class="blk collab-centered">
     <div class="head rv">
       <div class="kick"><span class="line"></span><span class="eyebrow">Nº 03 · Colaboremos</span></div>
       <h2 class="serif">Elige cómo quieres que tu marca <em>llegue</em></h2>
     </div>
-    <div class="offer">
-      <div class="opt rv">
-        <span class="opt-num">01</span>
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M16.5 10l5-2.5v9L16.5 14" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Reel patrocinado</h3>
-        <p>Un reel con mi voz y mi estilo, integrando tu marca dentro de mi narrativa — como si se lo contara a una amiga.</p>
-        <ul><li>Guion y producción incluidos</li><li>1 ronda de ajustes</li><li>Métricas post-campaña</li></ul>
-        <a class="opt-cta" href="#cierre">Quiero esto →</a>
-      </div>
-      <div class="opt rv d1 featured">
-        <span class="opt-tag">Más elegida</span>
-        <span class="opt-num">02</span>
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9.5 12l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Historias + enlace</h3>
-        <p>Secuencia de historias con enlace directo. La forma más rápida de mandar a mi comunidad a tu tienda.</p>
-        <ul><li>3 – 5 historias en secuencia</li><li>Sticker de enlace</li><li>Reporte de alcance y clics</li></ul>
-        <a class="opt-cta" href="#cierre">Quiero esto →</a>
-      </div>
-      <div class="opt rv d2">
-        <span class="opt-num">03</span>
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5S3.5 15 3.5 8.8A4.3 4.3 0 0 1 12 6.9a4.3 4.3 0 0 1 8.5 1.9C20.5 15 12 20.5 12 20.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Embajadora de marca</h3>
-        <p>Presencia continua durante uno o más meses. La opción con mayor confianza y conversión sostenida.</p>
-        <ul><li>Contenido mensual recurrente</li><li>Exclusividad de categoría</li><li>Estrategia personalizada</li></ul>
-        <a class="opt-cta" href="#cierre">Quiero esto →</a>
-      </div>
+    <div class="collab-formats rv">
+      <span>Reel patrocinado</span>
+      <span>Historias + enlace</span>
+      <span>Embajadora de marca</span>
     </div>
-    <div class="benefits">
-      <div class="benefit rv"><div class="bn">Comunidad fiel</div><p>Una audiencia que me sigue de cerca y toma lo que recomiendo como referencia.</p></div>
-      <div class="benefit rv d1"><div class="bn">Influencia real</div><p>No visibilidad prestada: capacidad genuina de mover a mi comunidad a la acción.</p></div>
-      <div class="benefit rv d2"><div class="bn">Contenido propio</div><p>Producción cuidada de principio a fin, con mi voz y mi estilo, sin plantillas.</p></div>
+    <div class="collab-contact rv">
+      <a class="collab-next" href="#cierre">
+        <span>Tu próxima colaboración empieza aquí</span>
+        <span class="collab-arrow" aria-hidden="true">↓</span>
+      </a>
     </div>
   </section>
 </div>
 
 <!-- ═══════ 6 · CIERRE ═══════ -->
 <div class="wrap">
-  <section class="blk" id="cierre" style="padding-top:40px">
+  <section class="blk" id="cierre" style="padding-top:12px">
     <div class="close rv">
-      <div class="miniportrait"><img id="p-close" src="" alt="Paula Sofía"></div>
       <h2 class="serif">Hablemos de cómo podemos <em>trabajar juntas</em></h2>
-      <p>Cuéntame sobre tu marca y tu idea. En menos de 48 horas recibirás una propuesta pensada a la medida de tu campaña.</p>
-      <a class="btn" href="mailto:hola@soypaulasofia.com">Escríbeme</a>
+      <a class="btn" href="mailto:soypaulasofiabusiness@gmail.com">Escríbeme</a>
     </div>
   </section>
 </div>
